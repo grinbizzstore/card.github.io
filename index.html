@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grinbizz EXIM PVT LTD</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #595959;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .card-wrapper {
+      width: 100%;
+      max-width: 440px;
+      padding: 16px;
+    }
+
+    .gb-card {
+      background: black; /* dark green */
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      color: #ffffff;
+    }
+
+    /* Top Hero Section */
+    .gb-hero {
+      position: relative;
+      height: 200px;
+      background-image: url("banner.jpg");
+      background-size: contain;   /* <-- Makes the image fit fully */
+      background-position: center;
+      background-repeat: no-repeat;  /* <-- Prevents tiling */
+      background-color: #000; /* Optional black background if image doesn’t fill */
+    }
+
+    /* .gb-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.75)
+      );
+    } */
+
+    .gb-hero-content {
+      position: absolute;
+      inset: 0;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .gb-hero-text {
+      max-width: 70%;
+    }
+
+    .gb-hero-text .eyebrow {
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fffb9d;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    .gb-hero-text h1 {
+      line-height: 1.1;
+      text-transform: uppercase;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .gb-hero-text h1 span {
+      display: block;
+    }
+
+    .gb-logo-circle {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -40%);
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      border: 5px solid #0f6f3e;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .gb-logo-circle img {
+      width: 130%;
+      height: 130%;
+      object-fit: cover;
+    }
+
+    /* Content section under hero */
+    .gb-content {
+      padding: 0px 18px 22px; /* extra top padding to balance logo circle */
+    }
+
+    .gb-title {
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    .gb-title h2 {
+      font-size: 26px;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .gb-subtitle {
+      text-align: center;
+      font-size: 13px;
+      margin-bottom: 18px;
+      opacity: 0.9;
+    }
+
+    /* Social buttons */
+    .social-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .social-btn {
+      background: #ffffff;
+      color: #222;
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .social-btn-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .social-btn span {
+      white-space: nowrap;
+    }
+
+    .google { background: #fff; }
+    .google .social-btn-icon   { color: #4285f4; }
+
+    .whatsapp .social-btn-icon { background: #25d366; color: #fff; }
+    .instagram .social-btn-icon{
+      background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285aeb);
+      color: #fff;
+    }
+    .youtube .social-btn-icon  { background: #ff0000; color: #fff; }
+    .facebook .social-btn-icon { background: #1877f2; color: #fff; }
+    .x-twitter .social-btn-icon{ background: #000; color: #fff; }
+    .linkedin .social-btn-icon { background: #0077B5; color: #fff;}
+    .snapchat .social-btn-icon { background: #FFFC00; color: #000; font-weight: 900;}
+    .pinterest .social-btn-icon { background: #E60023; color: #fff;}
+
+
+    /* Small arrow at very bottom (like in screenshot) */
+    .scroll-arrow {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px 8px 0 0;
+      background: #ffffff;
+      margin: 0 auto -4px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #555;
+    }
+
+    @media (max-width: 480px) {
+      .gb-hero-text h1 {
+        font-size: 22px;
+      }
+      .gb-logo-circle {
+        width: 135px;
+        height: 135px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-wrapper">
+    <div class="gb-card">
+
+      <!-- HERO -->
+      <div class="gb-hero">
+        <div class="gb-hero-overlay"></div>
+
+        <div class="gb-logo-circle">
+          <!-- Replace with your logo -->
+          <img src="logo.png" alt="Grinbizz Logo">
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="gb-content">
+        <div class="gb-title">
+          <!-- <h2>GRINBIZZ</h2> -->
+        </div>
+        <div class="gb-subtitle">
+          Ayurvedic Health Supplement
+        </div>
+
+        <div class="social-list">
+          <a href="https://share.google/VzMaFTZoPeldN5VjM" class="social-btn google">
+            <div class="social-btn-icon">
+              <i class="fab fa-google"></i>
+            </div>
+            <span>Grinbizz Ayurvedic</span>
+          </a>
+
+          <a href="https://api.whatsapp.com/send/?phone=918595276215&text&type=phone_number&app_absent=0" class="social-btn whatsapp">
+            <div class="social-btn-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <span>Grinbizz Ayurvedic</span>
+          </a>
+
+          <a href="https://www.instagram.com/grinbizz_ayurvedic/" class="social-btn instagram">
+            <div class="social-btn-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <span>@grinbizz_ayurvedic</span>
+          </a>
+
+          <a href="https://www.youtube.com/@Grinbizz_Ayurvedic" class="social-btn youtube">
+            <div class="social-btn-icon">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <span>Grinbizz Ayurvedic</span>
+          </a>
+
+          <a href="https://www.facebook.com/grinbizz" class="social-btn facebook">
+            <div class="social-btn-icon">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <span>Grinbizz</span>
+          </a>
+
+          <a href="https://x.com/grinbizz" class="social-btn x-twitter">
+            <div class="social-btn-icon">
+              <i class="fab fa-x-twitter"></i>
+            </div>
+            <span>@grinbizz</span>
+          </a>
+
+          <a href="https://www.linkedin.com/company/grinbizz-exim-pvt-ltd/" class="social-btn linkedin">
+            <div class="social-btn-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <span>Grinbizz Ayurvedic</span>
+          </a>
+
+          <a href="https://www.snapchat.com/add/shopping_time25?share_id=7XU74x5iaI0&locale=en-IN" class="social-btn snapchat">
+            <div class="social-btn-icon">
+              <i class="fab fa-snapchat-ghost"></i>
+            </div>
+            <span>@grinbizz</span>
+          </a>
+
+          <a href="https://in.pinterest.com/grinbizz_ayurvedic/" class="social-btn pinterest">
+            <div class="social-btn-icon">
+              <i class="fab fa-pinterest-p"></i>
+            </div>
+            <span>Grinbizz Ayurvedic</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
