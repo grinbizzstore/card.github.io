@@ -220,6 +220,74 @@
         height: 135px;
       }
     }
+    /************* MOBILE VIEW (max width 480px) *************/
+@media (max-width: 480px) {
+
+  .card-wrapper {
+    padding: 8px;
+  }
+
+  .gb-card {
+    border-radius: 18px;
+  }
+
+  .gb-hero {
+    height: 200px; /* reduce height */
+    background-size: cover; /* keep crop centered for mobile */
+  }
+
+  .gb-logo-circle {
+    width: 120px;
+    height: 120px;
+    border-width: 6px;
+    transform: translate(50%, -35%); /* adjusted logo position */
+  }
+
+  .gb-hero-text h1 {
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .gb-hero-text .eyebrow {
+    font-size: 11px;
+  }
+
+  .gb-content {
+    padding: 60px 12px 20px; /* reduced space */
+  }
+
+  .gb-title h2 {
+    font-size: 22px;
+  }
+
+  .gb-subtitle {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  .social-list {
+    gap: 10px;
+  }
+
+  .social-btn {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .social-btn-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+
+  .scroll-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+
   </style>
 </head>
 <body>
