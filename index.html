@@ -230,13 +230,89 @@
       }
 
       .gb-hero {
-        height: 250px; /* slightly reduce banner height */
+        height: 220px; /* slightly reduce banner height */
       }
 
       .gb-content {
         padding-top: 65px; /* adjust below logo */
       }
     }
+    /* MOBILE VIEW OPTIMIZED FOR 425px AND BELOW */
+@media (max-width: 425px) {
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .gb-card {
+    width: 95%;
+    margin: 12px auto;
+    border-radius: 14px;
+  }
+
+  .gb-hero {
+    height: 200px; /* reduce banner height */
+    background-size: cover;
+  }
+
+  .gb-logo-circle {
+    width: 115px;
+    height: 115px;
+    border-width: 6px;
+    transform: translate(50%, -38%);
+  }
+
+  .gb-hero-text h1 {
+    font-size: 19px;
+  }
+
+  .gb-hero-text .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .gb-content {
+    padding: 55px 10px 20px;
+  }
+
+  .gb-title h2 {
+    font-size: 22px;
+  }
+
+  .gb-subtitle {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .social-list {
+    gap: 9px;
+  }
+
+  .social-btn {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .social-btn-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .scroll-arrow {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+}
+
   
   </style>
 </head>
@@ -334,4 +410,3 @@
 
 </body>
 </html>
-
